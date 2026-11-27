@@ -7,6 +7,8 @@ on:
 jobs:
   build-apk:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -42,9 +44,21 @@ jobs:
       - name: Build Debug APK
         run: gradle :app:assembleDebug --no-daemon
 
+      - name: Prepare APK file
+        run: cp app/build/outputs/apk/debug/app-debug.apk Tarjuman.apk
+
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: Tarjuman-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: Tarjuman.apk
           if-no-files-found: error
+
+      - name: Publish APK to GitHub Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.${{ github.run_number }}
+          name: Tarjuman APK v1.0.${{ github.run_number }}
+          body: "ملف التثبيت المباشر لتطبيق ترجمان (APK)"
+          files: Tarjuman.apk
+          make_latest: true
