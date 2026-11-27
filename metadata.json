@@ -1,0 +1,6 @@
+{
+  "name": "ترجمان",
+  "description": "تطبيق ترجمة فورية مجاني للفيديوهات والنصوص من وإلى العربية مع تنزيل الفيديو بجودة عالية وتصميم عصري",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

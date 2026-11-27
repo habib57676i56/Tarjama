@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ترجمان</string>
+    <string name="nav_video_studio">استوديو الفيديو</string>
+    <string name="nav_instant_translate">ترجمة فورية</string>
+    <string name="nav_downloads">التنزيلات</string>
+    <string name="free_forever_badge">مجاني 100% • بدون اشتراك • بدون دبلجة</string>
+    <string name="paste_video_link_hint">الصق رابط فيديو من أي موقع أو تطبيق...</string>
+    <string name="analyze_link_action">تحليل وتشغيل</string>
+    <string name="download_hd_action">تنزيل بجودة عالية</string>
+    <string name="live_subtitles_title">الترجمة النصية الفورية</string>
+    <string name="mic_permission_rationale">يتطلب تفعيل الترجمة الفورية لصوت الفيديو السماح بالوصول إلى الميكروفون.</string>
+</resources>
